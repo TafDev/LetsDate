@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>LetsDate</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+  <div class="ui secondary  menu">
+	  <% if user_signed_in? %>
+  <a class="active item">
+		  Home
+	  </a>
+	  <a class="item">
+		  Messages
+	  </a>
+	  <a class="item">
+		  Friends
+	  </a>
+
+	  <div class="right menu">
+		  <%= link_to "logout", destroy_user_session_path, method: :delete, class: "ui negative basic button" %>
+	  </div>
+	  <% end %>
+  </div>
+  <p class="notice"><%= notice %></p>
+  <p class="alert"><%= alert %></p>
+  <%= yield %>
+  </body>
+</html>

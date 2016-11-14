@@ -1,0 +1,14 @@
+<div class="ui container">
+	<% if current_user.sign_in_count <= 1 %>
+		<h1>
+			Thank you for signing up <%= current_user.username %>, You are not far from finding your soul mate. We currently have <%= User.all.count %> users waiting to talk to you.
+		</h1>
+		<h2>
+			We just need you to answer a few more question so we can better help you. We promise, it wont take forever
+		</h2>
+	<%  else %>
+		<h1>Welcome back <%= current_user.username %></h1>
+	<% end  %>
+
+	<%= link_to "Complete my Profile", profile_path(current_user), class: "ui positive basic button" %>
+</div>
