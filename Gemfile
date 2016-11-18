@@ -30,6 +30,9 @@ gem 'jbuilder', '~> 2.5'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 gem 'stripe'
+gem "letter_opener", :group => :development
+gem 'letter_opener_web', '~> 1.2.0', :group => :development
+
 gem 'figaro'
 gem 'devise'
 gem 'remotipart', '~> 1.2'

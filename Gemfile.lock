@@ -137,6 +137,11 @@ GEM
     json (2.0.2)
     launchy (2.4.3)
       addressable (~> 2.3)
+    letter_opener (1.4.1)
+      launchy (~> 2.2)
+    letter_opener_web (1.2.3)
+      letter_opener (~> 1.0)
+      rails (>= 3.2)
     listen (3.0.8)
       rb-fsevent (~> 0.9, >= 0.9.4)
       rb-inotify (~> 0.9, >= 0.9.7)
@@ -322,6 +327,8 @@ DEPENDENCIES
   figaro
   jbuilder (~> 2.5)
   jquery-rails
+  letter_opener
+  letter_opener_web (~> 1.2.0)
   listen (~> 3.0.5)
   meta_request
   pg (~> 0.18)
