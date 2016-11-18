@@ -4,16 +4,14 @@
     <title>LetsDate</title>
     <%= csrf_meta_tags %>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag    'application', media: 'all' %>
+    <%= javascript_include_tag 'application' %>
   </head>
 
   <body>
-  <div class="ui secondary  menu">
+  <div class="ui top fixed borderless menu">
 	  <% if user_signed_in? %>
-  <a class="active item">
-		  Home
-	  </a>
+			  <%= link_to "Home", root_path, class: 'item' %>
 	  <a class="item">
 		  Messages
 	  </a>

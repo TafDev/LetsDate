@@ -10,20 +10,26 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161114174317) do
+ActiveRecord::Schema.define(version: 20161117173941) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "accounts", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",                 null: false
+    t.datetime "updated_at",                 null: false
+    t.integer  "user_id"
+    t.boolean  "is_premium", default: false
+    t.string   "stripeid"
+    t.index ["user_id"], name: "index_accounts_on_user_id", using: :btree
   end
 
   create_table "hobbies", force: :cascade do |t|
     t.string   "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer  "profile_id"
+    t.index ["profile_id"], name: "index_hobbies_on_profile_id", using: :btree
   end
 
   create_table "profiles", force: :cascade do |t|
@@ -32,6 +38,17 @@ ActiveRecord::Schema.define(version: 20161114174317) do
     t.string   "sex"
     t.integer  "age"
     t.string   "avatar"
+    t.integer  "user_id"
+    t.index ["user_id"], name: "index_profiles_on_user_id", using: :btree
+  end
+
+  create_table "user_hobbies", force: :cascade do |t|
+    t.integer  "profile_id"
+    t.integer  "hobby_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["hobby_id"], name: "index_user_hobbies_on_hobby_id", using: :btree
+    t.index ["profile_id"], name: "index_user_hobbies_on_profile_id", using: :btree
   end
 
   create_table "users", force: :cascade do |t|
@@ -53,4 +70,9 @@ ActiveRecord::Schema.define(version: 20161114174317) do
     t.index ["username"], name: "index_users_on_username", unique: true, using: :btree
   end
 
+  add_foreign_key "accounts", "users"
+  add_foreign_key "hobbies", "profiles"
+  add_foreign_key "profiles", "users"
+  add_foreign_key "user_hobbies", "hobbies"
+  add_foreign_key "user_hobbies", "profiles"
 end

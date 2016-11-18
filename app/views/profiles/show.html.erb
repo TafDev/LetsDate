@@ -1,11 +1,131 @@
 <div class="ui container">
-	<h2>Here is a list of what we need from you <%= current_user.username %></h2>
-	<ul>
-		<li>Preferences</li>
-		<li>Sex</li>
-		<li>Age</li>
-		<li>Age Preference</li>
-		<li>What you like</li>
-		<li>Profile picture</li>
-	</ul>
+	<!--<h2>Here is a list of what we need from you <%#= current_user.username %></h2>-->
+	<!--<ul>-->
+	<!--<li>Preferences</li>-->
+	<!--<li>Age Preference</li>-->
+	<!--<li>What you like</li>-->
+	<!--</ul>-->
+
+	<div class="ui stackable grid">
+		<div class="five wide column">
+			<div class="ui vertical fluid menu">
+				<div class="ui teal segment">
+					<div id="avatar" class="ui medium rounded image">
+						<div class="ui special cards">
+							<div class="card">
+								<div class="blurring dimmable image">
+									<div class="ui dimmer">
+										<div class="content">
+											<div class="center">
+												<div class="custom-btn ui inverted button">Change image</div>
+											</div>
+										</div>
+									</div>
+									<% if @user.profile.avatar %>
+											<%= image_tag(@user.profile.avatar.url || "", id: 'avatar-img') %>
+									<% else %>
+											<img src="assets/icon.png">
+											NO IMAGE!
+									<% end %>
+								</div>
+							</div>
+						</div>
+					</div>
+					<br>
+					<br>
+					<div class="six wide column">
+						<%= render 'about_me' %>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="nine wide column">
+			<div class="ui teal segment">
+				<% if @user.account.is_premium? %>
+					<a class="ui blue image label">
+						<div class="detail">Premium</div>
+					</a>
+				<% else %>
+						<a href='account' class="ui grey image label">
+							<div class="detail">
+								Premium
+							</div>
+						</a>
+				<% end %>
+			</div>
+		</div>
+	</div>
 </div>
+
+<script type="text/javascript" charset="utf-8">
+
+
+	var csrf = $("meta[name=csrf-token]").attr("content");
+
+	$('.label').on('click', function (e) {
+		var id1 = e.target.id;
+		var id = id1.substring(7, 99);
+		console.log(id);
+		$.ajax({
+			type: 'delete',
+			url: '/users/' + <%= current_user.id.to_s %> +'/profile',
+			data: {
+				id: id
+			},
+			success: function (response) {
+				console.log(response);
+				$('#delete-' + response.hobby_id).fadeOut();
+			}
+		});
+	});
+
+	$('.pen').on('click', function () {
+		$(this).parent().parent().find('.field').fadeIn();
+		$(this).parent().fadeOut()
+	});
+
+
+	$('.custom-btn').on('click', function () {
+		$('#profile_avatar').click();
+	});
+	$('#profile_avatar').on('change', function () {
+		$('#secret-submit').click();
+	});
+	$('#image-upload').on('ajax:remotipartComplete', function (e, data) {
+		$('#avatar-img').attr("src", JSON.parse(data.responseText).avatar.url)
+	});
+
+	$('#field-gender').on('change', function (v) {
+		$('#secret-gender-btn').click();
+		$('#field-gender').css('display', 'none').fadeOut();
+		$('#gender').fadeIn();
+	});
+
+	$('#gender-form').on('ajax:success', function (e, data) {
+		console.log(data);
+		$('#gender p span').html(data.sex);
+	});
+
+
+	$('#age-form').on('ajax:success', function (e, data) {
+		$('#age p span').html(data.age);
+		$('#age').css('display', 'none').fadeIn();
+		$('#field-age').fadeOut();
+	});
+
+	$('#hobbies-form').on('ajax:success', function (e, data) {
+		console.log(data);
+		var hobbies = $('#hobby');
+		for (var i = 0; i < data.hobbies.length; ++i) {
+			hobbies.append("<p><span class='ui large label'>" + data.hobbies[i].name + "</span></p>");
+		}
+		$('#field-hobbies').fadeOut();
+		hobbies.fadeIn();
+	});
+
+	$('.special.cards .image').dimmer({
+		on: 'hover'
+	});
+
+
+</script>

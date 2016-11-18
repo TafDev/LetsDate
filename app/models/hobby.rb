@@ -1,3 +1,4 @@
 class Hobby < ApplicationRecord
-	belongs_to :profile
+	has_many :user_hobbies
+	has_many :profiles, through: :user_hobbies
 end

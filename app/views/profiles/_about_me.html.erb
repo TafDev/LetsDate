@@ -1,0 +1,59 @@
+
+		<%= form_for @profile, {url: user_profile_path(@user), remote: true, html: {id: 'image-upload'}} do |f| %>
+				<div class="ui form">
+					<div id="field-avatar">
+						<%#= f.label :avatar %>
+						<%= f.file_field :avatar %>
+						<%= f.submit id: 'secret-submit' %>
+					</div>
+				</div>
+		<% end %>
+
+		<%= form_for @profile, {url: user_profile_path(@user), remote: true, html: {id: 'gender-form'}} do |f| %>
+				<div id="field-gender" class="field ui form">
+					<%= f.label :edit_gender %>
+					<%= f.collection_select(:sex, Profile::GENDER, :to_s, :to_s,
+					                        :include_blank => true) %>
+				</div>
+				<div id="gender" class="ui left icon input">
+					<%#= link_to semantic_icon('write', id: 'edit-btn-gender', class: 'pen') %>
+					<span class="pen"><%= semantic_icon('write', id: 'edit-btn-gender') %></span>
+					<p>Gender: <span><%= @user.profile.sex %></span></p>
+				</div>
+				<%= f.submit id: 'secret-gender-btn' %>
+
+		<% end %>
+
+		<%= form_for @profile, {url: user_profile_path(@user), html: {id: 'age-form'}, remote: true} do |f| %>
+
+				<div id="field-age" class="field ui form">
+					<%= f.label :edit_age %>
+					<%= f.number_field :age %>
+				</div>
+				<div id="age" class="ui left icon input">
+					<%#= link_to semantic_icon('write', id: 'edit-btn-age', class: 'pen') %>
+					<span class="pen"><%= semantic_icon('write', id: 'edit-btn-age') %></span>
+					<p>Age: <span><%= @user.profile.age %></p></span>
+				</div>
+				<%= f.submit id: 'secret-age-btn' %>
+		<% end %>
+
+		<%= form_for @hobby, url: user_profile_path(@user), method: :patch, html: {id: 'hobbies-form'}, remote: true do |f| %>
+
+				<div id="field-hobbies" class="field ui form">
+					<%= f.label :hobbies %>
+					<%= f.text_field :name %>
+					<p>Please comma seperate your hobbies e.g fun, games, love</p>
+				</div>
+				<div id="hobby" class="ui left icon input">
+					<%#= link_to semantic_icon('write', id: 'edit-btn-hobbies', class: 'pen')%>
+					<span class="pen"><%= semantic_icon('write', id: 'edit-btn-hobbies') %></span>
+					<p>Hobbies:
+						<% @user.profile.hobbies.each do |hobby| %></p>
+								<p><span class="ui large label"><%= hobby.name %><%=link_to semantic_icon('delete', id: "delete-#{hobby.id}", remote: true) %></span></p>
+						<% end %>
+						</div>
+				<%= f.submit class: "hobby-submit" %>
+		<% end %>
+
+		<%#= f.submit @user.profile.new_record? ? "Create account" : "Update Account", id: 'submit', class: "ui fluid large teal submit button" %>

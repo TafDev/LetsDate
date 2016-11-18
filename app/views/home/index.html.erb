@@ -10,5 +10,5 @@
 		<h1>Welcome back <%= current_user.username %></h1>
 	<% end  %>
 
-	<%= link_to "Complete my Profile", profile_path(current_user), class: "ui positive basic button" %>
+	<%= link_to "Complete my Profile", user_profile_path(current_user), class: "ui positive basic button" %>
 </div>
