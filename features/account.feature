@@ -7,9 +7,9 @@ Feature: Account
   Background:
     Given I have sample users
 
-    @selenium
+    @poltergeist
   Scenario:
     Given I am logged in as "Barvis"
     And I visit the account page for user "Barvis"
     Then I should see "Sign up for premium today"
-    And I click "stripe-button"
+    And I click "Pay with Card"
