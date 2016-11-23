@@ -5,6 +5,7 @@
 	<!--<li>Age Preference</li>-->
 	<!--<li>What you like</li>-->
 	<!--</ul>-->
+<%= render 'message' %>
 
 	<div class="ui stackable grid">
 		<div class="five wide column">
@@ -33,9 +34,16 @@
 					</div>
 					<br>
 					<br>
+					<button id="message-me" class="ui blue button">
+						<%= semantic_icon('mail') %>
+						Message me
+					</button>
+					<br>
+					<hr>
 					<div class="six wide column">
 						<%= render 'about_me' %>
 					</div>
+
 				</div>
 			</div>
 		</div>
@@ -59,6 +67,27 @@
 
 <script type="text/javascript" charset="utf-8">
 
+	$('#message-me').on('click', function () {
+		$('.small.modal')
+				.modal({blurring: true})
+				.modal('show')
+		;
+	});
+
+
+	$('#send-message').on('click', function () {
+		$.ajax({
+			type: 'post',
+			url: '/messages',
+			data: {
+				recipient_id: <%= @user.id %>,
+				body: $('#new_message > textarea')["0"].value
+			},
+			success: function (response) {
+				$('.close').click()
+			}
+		})
+	});
 
 	var csrf = $("meta[name=csrf-token]").attr("content");
 

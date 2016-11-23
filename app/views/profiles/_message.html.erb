@@ -1,0 +1,21 @@
+<div class="ui small modal">
+	<i class="close icon"></i>
+	<div class="header">
+		Send a message to <%= @user.username %>
+	</div>
+	<div class="content">
+		<div class="ui form">
+			<%= form_for @message do |f| %>
+					<%= f.label :message %>:
+					<%= f.text_area :body %>
+			<% end %>
+		</div>
+
+	</div>
+	<div class="actions">
+		<button id="send-message" class="ui teal button">
+			<%= semantic_icon('send') %>
+			Send
+		</button>
+	</div>
+</div>

@@ -5,6 +5,7 @@ class ProfilesController < ApplicationController
 	def show
 		@profile = @user.profile
 		@hobby = @profile.hobbies.new
+		@message = Message.new
 	end
 
 

@@ -1,0 +1,786 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="Rails LetsDate: development">
+  <database-model serializer="dbm" rdbms="POSTGRES" format-version="2.6">
+    <database id="1" name="postgres">
+      <object-id>12641</object-id>
+    </database>
+    <database id="2" name="beast">
+      <object-id>16384</object-id>
+    </database>
+    <database id="3" name="localhost">
+      <object-id>16385</object-id>
+    </database>
+    <database id="4" name="woodworking_development">
+      <object-id>17593</object-id>
+    </database>
+    <database id="5" name="woodworking_test">
+      <object-id>17594</object-id>
+    </database>
+    <database id="6" name="shoppingcart_development">
+      <object-id>18415</object-id>
+    </database>
+    <database id="7" name="shoppingcart_test">
+      <object-id>18416</object-id>
+    </database>
+    <database id="8" name="department_development">
+      <object-id>20206</object-id>
+    </database>
+    <database id="9" name="department_test">
+      <object-id>20207</object-id>
+    </database>
+    <database id="10" name="simpsons_development">
+      <object-id>20392</object-id>
+    </database>
+    <database id="11" name="simpsons_test">
+      <object-id>20393</object-id>
+    </database>
+    <database id="12" name="pizzadelivery_development">
+      <object-id>20677</object-id>
+    </database>
+    <database id="13" name="car_rental_development">
+      <object-id>20895</object-id>
+    </database>
+    <database id="14" name="car_rental_test">
+      <object-id>21057</object-id>
+    </database>
+    <database id="15" name="demo_project_development">
+      <object-id>21138</object-id>
+    </database>
+    <database id="16" name="sample_blog_development">
+      <object-id>29087</object-id>
+    </database>
+    <database id="17" name="rescue_the_princess_development">
+      <object-id>29137</object-id>
+    </database>
+    <database id="18" name="sa_development">
+      <object-id>29237</object-id>
+    </database>
+    <database id="19" name="pizza_deliver_development">
+      <object-id>29317</object-id>
+    </database>
+    <database id="20" name="pizza_deliver_test">
+      <object-id>29365</object-id>
+    </database>
+    <database id="21" name="northwind">
+      <object-id>29542</object-id>
+    </database>
+    <database id="22" name="doctor_appointment_development">
+      <object-id>29661</object-id>
+    </database>
+    <database id="23" name="doctor_appointment_test">
+      <object-id>29662</object-id>
+    </database>
+    <database id="24" name="appointment_booker_development">
+      <object-id>29782</object-id>
+    </database>
+    <database id="25" name="appointment_booker_test">
+      <object-id>29783</object-id>
+    </database>
+    <database id="26" name="sass_project_development">
+      <object-id>29876</object-id>
+    </database>
+    <database id="27" name="albert_einstein_development">
+      <object-id>38219</object-id>
+    </database>
+    <database id="28" name="bort_rental_agency_development">
+      <object-id>38352</object-id>
+    </database>
+    <database id="29" name="bort_rental_agency_test">
+      <object-id>38353</object-id>
+    </database>
+    <database id="30" name="police_squad_development">
+      <object-id>38571</object-id>
+    </database>
+    <database id="31" name="police_squad_test">
+      <object-id>38572</object-id>
+    </database>
+    <database id="32" name="police_force_development">
+      <object-id>38822</object-id>
+    </database>
+    <database id="33" name="police_force_test">
+      <object-id>38823</object-id>
+    </database>
+    <database id="34" name="drug_store_development">
+      <object-id>38983</object-id>
+    </database>
+    <database id="35" name="drug_store_test">
+      <object-id>38984</object-id>
+    </database>
+    <database id="36" name="CaptureTheFlagGlobal_development">
+      <object-id>39124</object-id>
+    </database>
+    <database id="37" name="CaptureTheFlagGlobal_test">
+      <object-id>39125</object-id>
+    </database>
+    <database id="38" name="workout_mate_development">
+      <object-id>39189</object-id>
+    </database>
+    <database id="39" name="workout_mate_test">
+      <object-id>39190</object-id>
+    </database>
+    <database id="40" name="boiler_plate_development">
+      <object-id>39225</object-id>
+    </database>
+    <database id="41" name="boiler_plate_test">
+      <object-id>39226</object-id>
+    </database>
+    <database id="42" name="blog_development">
+      <object-id>39259</object-id>
+    </database>
+    <database id="43" name="blog_test">
+      <object-id>39360</object-id>
+    </database>
+    <database id="44" name="rails-bootstrap_development">
+      <object-id>52678</object-id>
+    </database>
+    <database id="45" name="rails-bootstrap_test">
+      <object-id>52679</object-id>
+    </database>
+    <database id="46" name="rails-bootstrap_production">
+      <object-id>52680</object-id>
+    </database>
+    <database id="47" name="wegotsingles_development">
+      <object-id>54063</object-id>
+    </database>
+    <database id="48" name="wegotsingles_test">
+      <object-id>55602</object-id>
+    </database>
+    <database id="49" name="Chat_development">
+      <object-id>55931</object-id>
+    </database>
+    <database id="50" name="Chat_test">
+      <object-id>55932</object-id>
+    </database>
+    <database id="51" name="flight_attendant_development">
+      <object-id>55960</object-id>
+    </database>
+    <database id="52" name="flight_attendant_test">
+      <object-id>55961</object-id>
+    </database>
+    <database id="53" name="Netflixy_development">
+      <object-id>56029</object-id>
+    </database>
+    <database id="54" name="Netflixy_test">
+      <object-id>56030</object-id>
+    </database>
+    <database id="55" name="Vacations_development">
+      <object-id>64129</object-id>
+    </database>
+    <database id="56" name="Vacations_test">
+      <object-id>64180</object-id>
+    </database>
+    <database id="57" name="chat_development">
+      <object-id>64230</object-id>
+    </database>
+    <database id="58" name="chat_test">
+      <object-id>64498</object-id>
+    </database>
+    <database id="59" name="blog_on_steroids_development">
+      <object-id>64566</object-id>
+    </database>
+    <database id="60" name="blog_on_steroids_test">
+      <object-id>64567</object-id>
+    </database>
+    <database id="61" name="Northwind_development">
+      <object-id>65147</object-id>
+    </database>
+    <database id="62" name="Northwind_test">
+      <object-id>65148</object-id>
+    </database>
+    <database id="63" name="GameOfThrones_development">
+      <object-id>65422</object-id>
+    </database>
+    <database id="64" name="GameOfThrones_test">
+      <object-id>65423</object-id>
+    </database>
+    <database id="65" name="Police_development">
+      <object-id>66060</object-id>
+    </database>
+    <database id="66" name="Police_test">
+      <object-id>66061</object-id>
+    </database>
+    <database id="67" name="IMDB_development">
+      <object-id>66078</object-id>
+    </database>
+    <database id="68" name="IMDB_test">
+      <object-id>66079</object-id>
+    </database>
+    <database id="69" name="GEO_development">
+      <object-id>66161</object-id>
+    </database>
+    <database id="70" name="GEO_test">
+      <object-id>66162</object-id>
+    </database>
+    <database id="71" name="Tesco_development">
+      <object-id>66179</object-id>
+    </database>
+    <database id="72" name="Tesco_test">
+      <object-id>66180</object-id>
+    </database>
+    <database id="73" name="AroundTheWorld_development">
+      <object-id>66210</object-id>
+    </database>
+    <database id="74" name="AroundTheWorld_test">
+      <object-id>66211</object-id>
+    </database>
+    <database id="75" name="LetsDate_development">
+      <object-id>67254</object-id>
+      <visible>1</visible>
+    </database>
+    <database id="76" name="PharmaSEAL_development">
+      <object-id>66760</object-id>
+    </database>
+    <database id="77" name="PharmaSEAL_test">
+      <object-id>66761</object-id>
+    </database>
+    <database id="78" name="LetsDate_test">
+      <object-id>67255</object-id>
+    </database>
+    <schema id="79" parent="75" name="public">
+      <object-id>2200</object-id>
+      <visible>1</visible>
+      <introspection-state-number>272234</introspection-state-number>
+      <introspection-timestamp>2016-11-22.17:26:43.580</introspection-timestamp>
+    </schema>
+    <schema id="80" parent="75" name="pg_catalog">
+      <object-id>11</object-id>
+    </schema>
+    <schema id="81" parent="75" name="pg_toast">
+      <object-id>99</object-id>
+    </schema>
+    <schema id="82" parent="75" name="pg_temp_1">
+      <object-id>11816</object-id>
+    </schema>
+    <schema id="83" parent="75" name="pg_toast_temp_1">
+      <object-id>11817</object-id>
+    </schema>
+    <schema id="84" parent="75" name="information_schema">
+      <object-id>12349</object-id>
+    </schema>
+    <sequence id="85" parent="79" name="accounts_id_seq">
+      <object-id>67297</object-id>
+      <state-number>272113</state-number>
+    </sequence>
+    <sequence id="86" parent="79" name="conversations_id_seq">
+      <object-id>67520</object-id>
+      <state-number>272219</state-number>
+    </sequence>
+    <sequence id="87" parent="79" name="hobbies_id_seq">
+      <object-id>67308</object-id>
+      <state-number>272115</state-number>
+    </sequence>
+    <sequence id="88" parent="79" name="messages_id_seq">
+      <object-id>67509</object-id>
+      <state-number>272218</state-number>
+    </sequence>
+    <sequence id="89" parent="79" name="profiles_id_seq">
+      <object-id>67289</object-id>
+      <state-number>272112</state-number>
+    </sequence>
+    <sequence id="90" parent="79" name="user_hobbies_id_seq">
+      <object-id>67331</object-id>
+      <state-number>272118</state-number>
+    </sequence>
+    <sequence id="91" parent="79" name="users_id_seq">
+      <object-id>67272</object-id>
+      <state-number>272110</state-number>
+    </sequence>
+    <table id="92" parent="79" name="accounts">
+      <object-id>67299</object-id>
+      <state-number>272217</state-number>
+    </table>
+    <table id="93" parent="79" name="ar_internal_metadata">
+      <object-id>67264</object-id>
+      <state-number>272109</state-number>
+    </table>
+    <table id="94" parent="79" name="conversations">
+      <object-id>67522</object-id>
+      <state-number>272234</state-number>
+    </table>
+    <table id="95" parent="79" name="hobbies">
+      <object-id>67310</object-id>
+      <state-number>272118</state-number>
+    </table>
+    <table id="96" parent="79" name="messages">
+      <object-id>67511</object-id>
+      <state-number>272234</state-number>
+    </table>
+    <table id="97" parent="79" name="profiles">
+      <object-id>67291</object-id>
+      <state-number>272118</state-number>
+    </table>
+    <table id="98" parent="79" name="schema_migrations">
+      <object-id>67256</object-id>
+      <state-number>272108</state-number>
+    </table>
+    <table id="99" parent="79" name="user_hobbies">
+      <object-id>67333</object-id>
+      <state-number>272118</state-number>
+    </table>
+    <table id="100" parent="79" name="users">
+      <object-id>67274</object-id>
+      <state-number>272229</state-number>
+    </table>
+    <column id="101" parent="92" name="id">
+      <state-number>272113</state-number>
+      <mandatory>1</mandatory>
+      <data-type>integer|0</data-type>
+      <default-expression>nextval(&apos;accounts_id_seq&apos;::regclass)</default-expression>
+    </column>
+    <column id="102" parent="92" name="created_at">
+      <state-number>272113</state-number>
+      <mandatory>1</mandatory>
+      <data-type>timestamp|0</data-type>
+    </column>
+    <column id="103" parent="92" name="updated_at">
+      <state-number>272113</state-number>
+      <mandatory>1</mandatory>
+      <data-type>timestamp|0</data-type>
+    </column>
+    <column id="104" parent="92" name="user_id">
+      <state-number>272119</state-number>
+      <data-type>integer|0</data-type>
+    </column>
+    <column id="105" parent="92" name="is_premium">
+      <state-number>272217</state-number>
+      <data-type>boolean|0</data-type>
+      <default-expression>false</default-expression>
+    </column>
+    <column id="106" parent="92" name="stripeid">
+      <state-number>272217</state-number>
+      <data-type>varchar|0</data-type>
+    </column>
+    <index id="107" parent="92" name="accounts_pkey">
+      <object-id>67303</object-id>
+      <columns>id</columns>
+      <desc-columns></desc-columns>
+      <unique>1</unique>
+    </index>
+    <index id="108" parent="92" name="index_accounts_on_user_id">
+      <object-id>67351</object-id>
+      <columns>user_id</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <key id="109" parent="92" name="accounts_pkey">
+      <object-id>67304</object-id>
+      <columns>id</columns>
+      <underlying-index>accounts_pkey</underlying-index>
+      <primary>1</primary>
+    </key>
+    <foreign-key id="110" parent="92" name="fk_rails_b1e30bebc8">
+      <object-id>67352</object-id>
+      <columns>user_id</columns>
+      <ref-key>~.users.users_pkey</ref-key>
+      <cascade-update-rule>restrict</cascade-update-rule>
+      <cascade-delete-rule>restrict</cascade-delete-rule>
+    </foreign-key>
+    <column id="111" parent="93" name="key">
+      <state-number>272109</state-number>
+      <mandatory>1</mandatory>
+      <data-type>varchar|0</data-type>
+    </column>
+    <column id="112" parent="93" name="value">
+      <state-number>272109</state-number>
+      <data-type>varchar|0</data-type>
+    </column>
+    <column id="113" parent="93" name="created_at">
+      <state-number>272109</state-number>
+      <mandatory>1</mandatory>
+      <data-type>timestamp|0</data-type>
+    </column>
+    <column id="114" parent="93" name="updated_at">
+      <state-number>272109</state-number>
+      <mandatory>1</mandatory>
+      <data-type>timestamp|0</data-type>
+    </column>
+    <index id="115" parent="93" name="ar_internal_metadata_pkey">
+      <object-id>67270</object-id>
+      <columns>key</columns>
+      <desc-columns></desc-columns>
+      <unique>1</unique>
+    </index>
+    <key id="116" parent="93" name="ar_internal_metadata_pkey">
+      <object-id>67271</object-id>
+      <columns>key</columns>
+      <underlying-index>ar_internal_metadata_pkey</underlying-index>
+      <primary>1</primary>
+    </key>
+    <column id="117" parent="94" name="id">
+      <state-number>272219</state-number>
+      <mandatory>1</mandatory>
+      <data-type>integer|0</data-type>
+      <default-expression>nextval(&apos;conversations_id_seq&apos;::regclass)</default-expression>
+    </column>
+    <column id="118" parent="94" name="sender_id">
+      <state-number>272219</state-number>
+      <data-type>integer|0</data-type>
+    </column>
+    <column id="119" parent="94" name="recipient_id">
+      <state-number>272219</state-number>
+      <data-type>integer|0</data-type>
+    </column>
+    <column id="120" parent="94" name="created_at">
+      <state-number>272219</state-number>
+      <mandatory>1</mandatory>
+      <data-type>timestamp|0</data-type>
+    </column>
+    <column id="121" parent="94" name="updated_at">
+      <state-number>272219</state-number>
+      <mandatory>1</mandatory>
+      <data-type>timestamp|0</data-type>
+    </column>
+    <index id="122" parent="94" name="conversations_pkey">
+      <object-id>67526</object-id>
+      <columns>id</columns>
+      <desc-columns></desc-columns>
+      <unique>1</unique>
+    </index>
+    <key id="123" parent="94" name="conversations_pkey">
+      <object-id>67527</object-id>
+      <columns>id</columns>
+      <underlying-index>conversations_pkey</underlying-index>
+      <primary>1</primary>
+    </key>
+    <column id="124" parent="95" name="id">
+      <state-number>272115</state-number>
+      <mandatory>1</mandatory>
+      <data-type>integer|0</data-type>
+      <default-expression>nextval(&apos;hobbies_id_seq&apos;::regclass)</default-expression>
+    </column>
+    <column id="125" parent="95" name="name">
+      <state-number>272115</state-number>
+      <data-type>varchar|0</data-type>
+    </column>
+    <column id="126" parent="95" name="created_at">
+      <state-number>272115</state-number>
+      <mandatory>1</mandatory>
+      <data-type>timestamp|0</data-type>
+    </column>
+    <column id="127" parent="95" name="updated_at">
+      <state-number>272115</state-number>
+      <mandatory>1</mandatory>
+      <data-type>timestamp|0</data-type>
+    </column>
+    <column id="128" parent="95" name="profile_id">
+      <state-number>272117</state-number>
+      <data-type>integer|0</data-type>
+    </column>
+    <index id="129" parent="95" name="hobbies_pkey">
+      <object-id>67317</object-id>
+      <columns>id</columns>
+      <desc-columns></desc-columns>
+      <unique>1</unique>
+    </index>
+    <index id="130" parent="95" name="index_hobbies_on_profile_id">
+      <object-id>67325</object-id>
+      <columns>profile_id</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <key id="131" parent="95" name="hobbies_pkey">
+      <object-id>67318</object-id>
+      <columns>id</columns>
+      <underlying-index>hobbies_pkey</underlying-index>
+      <primary>1</primary>
+    </key>
+    <foreign-key id="132" parent="95" name="fk_rails_de31dbfc48">
+      <object-id>67326</object-id>
+      <columns>profile_id</columns>
+      <ref-key>~.profiles.profiles_pkey</ref-key>
+      <cascade-update-rule>restrict</cascade-update-rule>
+      <cascade-delete-rule>restrict</cascade-delete-rule>
+    </foreign-key>
+    <column id="133" parent="96" name="id">
+      <state-number>272218</state-number>
+      <mandatory>1</mandatory>
+      <data-type>integer|0</data-type>
+      <default-expression>nextval(&apos;messages_id_seq&apos;::regclass)</default-expression>
+    </column>
+    <column id="134" parent="96" name="body">
+      <state-number>272218</state-number>
+      <data-type>text|0</data-type>
+    </column>
+    <column id="135" parent="96" name="created_at">
+      <state-number>272218</state-number>
+      <mandatory>1</mandatory>
+      <data-type>timestamp|0</data-type>
+    </column>
+    <column id="136" parent="96" name="updated_at">
+      <state-number>272218</state-number>
+      <mandatory>1</mandatory>
+      <data-type>timestamp|0</data-type>
+    </column>
+    <column id="137" parent="96" name="user_id">
+      <state-number>272229</state-number>
+      <data-type>integer|0</data-type>
+    </column>
+    <column id="138" parent="96" name="conversation_id">
+      <state-number>272234</state-number>
+      <data-type>integer|0</data-type>
+    </column>
+    <index id="139" parent="96" name="messages_pkey">
+      <object-id>67518</object-id>
+      <columns>id</columns>
+      <desc-columns></desc-columns>
+      <unique>1</unique>
+    </index>
+    <index id="140" parent="96" name="index_messages_on_user_id">
+      <object-id>67547</object-id>
+      <columns>user_id</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <index id="141" parent="96" name="index_messages_on_conversation_id">
+      <object-id>67559</object-id>
+      <columns>conversation_id</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <key id="142" parent="96" name="messages_pkey">
+      <object-id>67519</object-id>
+      <columns>id</columns>
+      <underlying-index>messages_pkey</underlying-index>
+      <primary>1</primary>
+    </key>
+    <foreign-key id="143" parent="96" name="fk_rails_273a25a7a6">
+      <object-id>67548</object-id>
+      <columns>user_id</columns>
+      <ref-key>~.users.users_pkey</ref-key>
+      <cascade-update-rule>restrict</cascade-update-rule>
+      <cascade-delete-rule>restrict</cascade-delete-rule>
+    </foreign-key>
+    <foreign-key id="144" parent="96" name="fk_rails_7f927086d2">
+      <object-id>67560</object-id>
+      <columns>conversation_id</columns>
+      <ref-key>~.conversations.conversations_pkey</ref-key>
+      <cascade-update-rule>restrict</cascade-update-rule>
+      <cascade-delete-rule>restrict</cascade-delete-rule>
+    </foreign-key>
+    <column id="145" parent="97" name="id">
+      <state-number>272112</state-number>
+      <mandatory>1</mandatory>
+      <data-type>integer|0</data-type>
+      <default-expression>nextval(&apos;profiles_id_seq&apos;::regclass)</default-expression>
+    </column>
+    <column id="146" parent="97" name="created_at">
+      <state-number>272112</state-number>
+      <mandatory>1</mandatory>
+      <data-type>timestamp|0</data-type>
+    </column>
+    <column id="147" parent="97" name="updated_at">
+      <state-number>272112</state-number>
+      <mandatory>1</mandatory>
+      <data-type>timestamp|0</data-type>
+    </column>
+    <column id="148" parent="97" name="sex">
+      <state-number>272114</state-number>
+      <data-type>varchar|0</data-type>
+    </column>
+    <column id="149" parent="97" name="age">
+      <state-number>272114</state-number>
+      <data-type>integer|0</data-type>
+    </column>
+    <column id="150" parent="97" name="avatar">
+      <state-number>272114</state-number>
+      <data-type>varchar|0</data-type>
+    </column>
+    <column id="151" parent="97" name="user_id">
+      <state-number>272116</state-number>
+      <data-type>integer|0</data-type>
+    </column>
+    <index id="152" parent="97" name="profiles_pkey">
+      <object-id>67295</object-id>
+      <columns>id</columns>
+      <desc-columns></desc-columns>
+      <unique>1</unique>
+    </index>
+    <index id="153" parent="97" name="index_profiles_on_user_id">
+      <object-id>67319</object-id>
+      <columns>user_id</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <key id="154" parent="97" name="profiles_pkey">
+      <object-id>67296</object-id>
+      <columns>id</columns>
+      <underlying-index>profiles_pkey</underlying-index>
+      <primary>1</primary>
+    </key>
+    <foreign-key id="155" parent="97" name="fk_rails_e424190865">
+      <object-id>67320</object-id>
+      <columns>user_id</columns>
+      <ref-key>~.users.users_pkey</ref-key>
+      <cascade-update-rule>restrict</cascade-update-rule>
+      <cascade-delete-rule>restrict</cascade-delete-rule>
+    </foreign-key>
+    <column id="156" parent="98" name="version">
+      <state-number>272108</state-number>
+      <mandatory>1</mandatory>
+      <data-type>varchar|0</data-type>
+    </column>
+    <index id="157" parent="98" name="schema_migrations_pkey">
+      <object-id>67262</object-id>
+      <columns>version</columns>
+      <desc-columns></desc-columns>
+      <unique>1</unique>
+    </index>
+    <key id="158" parent="98" name="schema_migrations_pkey">
+      <object-id>67263</object-id>
+      <columns>version</columns>
+      <underlying-index>schema_migrations_pkey</underlying-index>
+      <primary>1</primary>
+    </key>
+    <column id="159" parent="99" name="id">
+      <state-number>272118</state-number>
+      <mandatory>1</mandatory>
+      <data-type>integer|0</data-type>
+      <default-expression>nextval(&apos;user_hobbies_id_seq&apos;::regclass)</default-expression>
+    </column>
+    <column id="160" parent="99" name="profile_id">
+      <state-number>272118</state-number>
+      <data-type>integer|0</data-type>
+    </column>
+    <column id="161" parent="99" name="hobby_id">
+      <state-number>272118</state-number>
+      <data-type>integer|0</data-type>
+    </column>
+    <column id="162" parent="99" name="created_at">
+      <state-number>272118</state-number>
+      <mandatory>1</mandatory>
+      <data-type>timestamp|0</data-type>
+    </column>
+    <column id="163" parent="99" name="updated_at">
+      <state-number>272118</state-number>
+      <mandatory>1</mandatory>
+      <data-type>timestamp|0</data-type>
+    </column>
+    <index id="164" parent="99" name="user_hobbies_pkey">
+      <object-id>67337</object-id>
+      <columns>id</columns>
+      <desc-columns></desc-columns>
+      <unique>1</unique>
+    </index>
+    <index id="165" parent="99" name="index_user_hobbies_on_profile_id">
+      <object-id>67349</object-id>
+      <columns>profile_id</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <index id="166" parent="99" name="index_user_hobbies_on_hobby_id">
+      <object-id>67350</object-id>
+      <columns>hobby_id</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <key id="167" parent="99" name="user_hobbies_pkey">
+      <object-id>67338</object-id>
+      <columns>id</columns>
+      <underlying-index>user_hobbies_pkey</underlying-index>
+      <primary>1</primary>
+    </key>
+    <foreign-key id="168" parent="99" name="fk_rails_e4de65c2d0">
+      <object-id>67339</object-id>
+      <columns>profile_id</columns>
+      <ref-key>~.profiles.profiles_pkey</ref-key>
+      <cascade-update-rule>restrict</cascade-update-rule>
+      <cascade-delete-rule>restrict</cascade-delete-rule>
+    </foreign-key>
+    <foreign-key id="169" parent="99" name="fk_rails_fad3a0f3a2">
+      <object-id>67344</object-id>
+      <columns>hobby_id</columns>
+      <ref-key>~.hobbies.hobbies_pkey</ref-key>
+      <cascade-update-rule>restrict</cascade-update-rule>
+      <cascade-delete-rule>restrict</cascade-delete-rule>
+    </foreign-key>
+    <column id="170" parent="100" name="id">
+      <state-number>272110</state-number>
+      <mandatory>1</mandatory>
+      <data-type>integer|0</data-type>
+      <default-expression>nextval(&apos;users_id_seq&apos;::regclass)</default-expression>
+    </column>
+    <column id="171" parent="100" name="email">
+      <state-number>272110</state-number>
+      <mandatory>1</mandatory>
+      <data-type>varchar|0</data-type>
+      <default-expression>&apos;&apos;::character varying</default-expression>
+    </column>
+    <column id="172" parent="100" name="encrypted_password">
+      <state-number>272110</state-number>
+      <mandatory>1</mandatory>
+      <data-type>varchar|0</data-type>
+      <default-expression>&apos;&apos;::character varying</default-expression>
+    </column>
+    <column id="173" parent="100" name="reset_password_token">
+      <state-number>272110</state-number>
+      <data-type>varchar|0</data-type>
+    </column>
+    <column id="174" parent="100" name="reset_password_sent_at">
+      <state-number>272110</state-number>
+      <data-type>timestamp|0</data-type>
+    </column>
+    <column id="175" parent="100" name="remember_created_at">
+      <state-number>272110</state-number>
+      <data-type>timestamp|0</data-type>
+    </column>
+    <column id="176" parent="100" name="sign_in_count">
+      <state-number>272110</state-number>
+      <mandatory>1</mandatory>
+      <data-type>integer|0</data-type>
+      <default-expression>0</default-expression>
+    </column>
+    <column id="177" parent="100" name="current_sign_in_at">
+      <state-number>272110</state-number>
+      <data-type>timestamp|0</data-type>
+    </column>
+    <column id="178" parent="100" name="last_sign_in_at">
+      <state-number>272110</state-number>
+      <data-type>timestamp|0</data-type>
+    </column>
+    <column id="179" parent="100" name="current_sign_in_ip">
+      <state-number>272110</state-number>
+      <data-type>inet|0</data-type>
+    </column>
+    <column id="180" parent="100" name="last_sign_in_ip">
+      <state-number>272110</state-number>
+      <data-type>inet|0</data-type>
+    </column>
+    <column id="181" parent="100" name="created_at">
+      <state-number>272110</state-number>
+      <mandatory>1</mandatory>
+      <data-type>timestamp|0</data-type>
+    </column>
+    <column id="182" parent="100" name="updated_at">
+      <state-number>272110</state-number>
+      <mandatory>1</mandatory>
+      <data-type>timestamp|0</data-type>
+    </column>
+    <column id="183" parent="100" name="username">
+      <state-number>272111</state-number>
+      <data-type>varchar|0</data-type>
+    </column>
+    <index id="184" parent="100" name="users_pkey">
+      <object-id>67284</object-id>
+      <columns>id</columns>
+      <desc-columns></desc-columns>
+      <unique>1</unique>
+    </index>
+    <index id="185" parent="100" name="index_users_on_email">
+      <object-id>67286</object-id>
+      <columns>email</columns>
+      <desc-columns></desc-columns>
+      <unique>1</unique>
+    </index>
+    <index id="186" parent="100" name="index_users_on_reset_password_token">
+      <object-id>67287</object-id>
+      <columns>reset_password_token</columns>
+      <desc-columns></desc-columns>
+      <unique>1</unique>
+    </index>
+    <index id="187" parent="100" name="index_users_on_username">
+      <object-id>67288</object-id>
+      <columns>username</columns>
+      <desc-columns></desc-columns>
+      <unique>1</unique>
+    </index>
+    <key id="188" parent="100" name="users_pkey">
+      <object-id>67285</object-id>
+      <columns>id</columns>
+      <underlying-index>users_pkey</underlying-index>
+      <primary>1</primary>
+    </key>
+  </database-model>
+</dataSource>

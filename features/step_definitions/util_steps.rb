@@ -1,7 +1,6 @@
  require 'pry'
 Given(/^I am logged in as "([^"]+)"$/) do |username|
 	log_on_as(username)
-	# binding.pry
 end
 
 When(/^I visit "([^"]+)"$/) do |page|
@@ -13,6 +12,5 @@ When(/^I click "([^"]+)"$/) do |text|
 end
 
 Then(/^I should see "([^"]*)"$/) do |content|
-	# save_and_open_page
 	expect(page.body).to match(content)
 end

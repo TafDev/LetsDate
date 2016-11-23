@@ -1,0 +1,24 @@
+<div class="ui container">
+	<div class="ui stacked grid">
+		<div class="row">
+			<div class="four wide column">
+				<h1>All Conversations</h1>
+				<% @my_conversations.each do |conversation| %>
+						<div id='conv-<%= conversation.id %>' class="ui message">
+							<%= conversation.sender.username %> said: <br>
+							<%= conversation.messages.last.body unless conversation.messages.last.nil? %>
+						</div>
+				<% end %>
+			</div>
+
+			<div class="ten wide column">
+			</div>
+		</div>
+	</div>
+</div>
+
+<script type="text/javascript" charset="utf-8">
+	$('.message').on('click', function () {
+		var id = $(this).attr("id").substring(5, 99) ;
+	});
+</script>
