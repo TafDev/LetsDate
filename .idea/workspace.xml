@@ -2,20 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d6760e43-0753-423f-a038-1a95d7722fd8" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/messages/index.html.erb" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.xml" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources/8c6cd254-8d84-4385-9933-5c4005ce4b48.xml" afterPath="$PROJECT_DIR$/.idea/dataSources/8c6cd254-8d84-4385-9933-5c4005ce4b48.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources/e681f0e7-d212-49b4-89a9-fdebfb459377.xml" afterPath="$PROJECT_DIR$/.idea/dataSources/e681f0e7-d212-49b4-89a9-fdebfb459377.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/conversations.scss" afterPath="$PROJECT_DIR$/app/assets/stylesheets/conversations.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/conversations_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/conversations_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/messages_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/messages_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/conversation.rb" afterPath="$PROJECT_DIR$/app/models/conversation.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/message.rb" afterPath="$PROJECT_DIR$/app/models/message.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/conversations/index.html.erb" afterPath="$PROJECT_DIR$/app/views/conversations/index.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/profiles/show.html.erb" afterPath="$PROJECT_DIR$/app/views/profiles/show.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/routes.rb" afterPath="$PROJECT_DIR$/config/routes.rb" />
     </list>
     <ignored path="LetsDate.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -90,7 +77,9 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="105">
               <caret line="22" column="16" selection-start-line="22" selection-start-column="16" selection-end-line="22" selection-end-column="16" />
-              <folding />
+              <folding>
+                <marker date="1480110520000" expanded="true" signature="628:837" ph="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -128,12 +117,9 @@
       <file leaf-file-name="conversations_controller.rb" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/controllers/conversations_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
+            <state relative-caret-position="420">
               <caret line="28" column="7" selection-start-line="28" selection-start-column="7" selection-end-line="28" selection-end-column="7" />
-              <folding>
-                <element signature="e#315#927#0" expanded="false" />
-                <element signature="e#580#922#1" expanded="false" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -183,7 +169,12 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="841">
               <caret line="89" column="6" selection-start-line="89" selection-start-column="6" selection-end-line="89" selection-end-column="6" />
-              <folding />
+              <folding>
+                <marker date="1480110520000" expanded="true" signature="1747:3870" ph="..." />
+                <marker date="1480110520000" expanded="true" signature="1917:2156" ph="{...}" />
+                <marker date="1480110520000" expanded="true" signature="1928:2152" ph="{&quot;type&quot;: 'post'...}" />
+                <marker date="1480110520000" expanded="true" signature="1977:2084" ph="{...}" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -552,7 +543,7 @@
       <recent name="$PROJECT_DIR$/features/step_definitions" />
     </key>
   </component>
-  <component name="RunManager" selected="Cucumber.account.feature">
+  <component name="RunManager" selected="Rails.Production: LetsDate">
     <configuration default="false" name="account.feature" type="CucumberRunConfigurationType" factoryName="Cucumber" temporary="true">
       <predefined_log_file id="RUBY_CUCUMBER" enabled="true" />
       <module name="LetsDate" />
@@ -810,7 +801,7 @@
       <option name="presentableId" value="Default" />
       <updated>1479521578638</updated>
       <workItem from="1479521580060" duration="3330000" />
-      <workItem from="1479586229597" duration="91681000" />
+      <workItem from="1479586229597" duration="91908000" />
     </task>
     <servers />
   </component>
@@ -829,7 +820,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="95011000" />
+    <option name="totallyTimeSpent" value="95238000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -842,7 +833,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="1440" y="0" width="1920" height="1080" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18849841" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32891566" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -852,7 +843,7 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32891566" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32891566" sideWeight="0.49713877" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24964234" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33267328" sideWeight="0.49713877" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33267328" sideWeight="0.49713877" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -1352,7 +1343,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="841">
           <caret line="89" column="6" selection-start-line="89" selection-start-column="6" selection-end-line="89" selection-end-column="6" />
-          <folding />
+          <folding>
+            <marker date="1480110520000" expanded="true" signature="1747:3870" ph="..." />
+            <marker date="1480110520000" expanded="true" signature="1917:2156" ph="{...}" />
+            <marker date="1480110520000" expanded="true" signature="1928:2152" ph="{&quot;type&quot;: 'post'...}" />
+            <marker date="1480110520000" expanded="true" signature="1977:2084" ph="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1400,7 +1396,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
           <caret line="22" column="16" selection-start-line="22" selection-start-column="16" selection-end-line="22" selection-end-column="16" />
-          <folding />
+          <folding>
+            <marker date="1480110520000" expanded="true" signature="628:837" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1414,12 +1412,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/conversations_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
+        <state relative-caret-position="420">
           <caret line="28" column="7" selection-start-line="28" selection-start-column="7" selection-end-line="28" selection-end-column="7" />
-          <folding>
-            <element signature="e#315#927#0" expanded="false" />
-            <element signature="e#580#922#1" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
