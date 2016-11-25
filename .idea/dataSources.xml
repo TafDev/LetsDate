@@ -49,21 +49,11 @@
         </library>
       </libraries>
     </data-source>
-    <data-source source="LOCAL" name="Rails LetsDate: production" uuid="554d4291-af8b-4b2d-973b-4142872c7db3">
+    <data-source source="LOCAL" name="PostgreSQL - PharmaSEAL_development@localhost" uuid="cfd083cb-c684-44ba-97ce-62ee626efbdc">
       <driver-ref>postgresql</driver-ref>
       <synchronize>true</synchronize>
-      <imported>true</imported>
-      <remarks>$PROJECT_DIR$/config/database.yml</remarks>
       <jdbc-driver>org.postgresql.Driver</jdbc-driver>
-      <jdbc-url>jdbc:postgresql:LetsDate_production</jdbc-url>
-      <libraries>
-        <library>
-          <url>file://$APPLICATION_CONFIG_DIR$/jdbc-drivers/postgresql-driver-license.txt</url>
-        </library>
-        <library>
-          <url>file://$APPLICATION_CONFIG_DIR$/jdbc-drivers/postgresql-9.4-1201.jdbc4.jar</url>
-        </library>
-      </libraries>
+      <jdbc-url>jdbc:postgresql://localhost:5432/PharmaSEAL_development</jdbc-url>
     </data-source>
   </component>
 </project>

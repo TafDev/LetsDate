@@ -80,9 +80,10 @@
 			type: 'post',
 			url: '/messages',
 			data: {
+				message: {
 				recipient_id: <%= @user.id %>,
 				body: $('#new_message > textarea')["0"].value
-			},
+			}},
 			success: function (response) {
 				$('.close').click()
 			}

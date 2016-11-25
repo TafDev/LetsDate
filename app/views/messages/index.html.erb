@@ -1,1 +1,6 @@
-<h1>All my Messages</h1>
+
+<% unless @messages.nil? %>
+	<% @messages.each do |message| %>
+		<%#= message.body %>
+	<% end %>
+<% end %>

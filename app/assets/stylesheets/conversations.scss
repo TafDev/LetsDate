@@ -2,9 +2,13 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.message {
+.msg {
   &:hover {
     cursor: pointer;
     background-color: teal;
   }
+}
+
+.btn {
+  display: none;
 }
