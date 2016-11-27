@@ -8,6 +8,7 @@
 		</h2>
 	<%  else %>
 		<h1>Welcome back <%= current_user.username %></h1>
+			<%= render @activities %>
 	<% end  %>
 
 	<%= link_to "Complete my Profile", user_profile_path(current_user), class: "ui positive basic button" %>

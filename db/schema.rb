@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161122172058) do
+ActiveRecord::Schema.define(version: 20161127155532) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -22,6 +22,16 @@ ActiveRecord::Schema.define(version: 20161122172058) do
     t.boolean  "is_premium", default: false
     t.string   "stripeid"
     t.index ["user_id"], name: "index_accounts_on_user_id", using: :btree
+  end
+
+  create_table "activities", force: :cascade do |t|
+    t.string   "activityable_type"
+    t.integer  "activityable_id"
+    t.datetime "created_at",        null: false
+    t.datetime "updated_at",        null: false
+    t.string   "name"
+    t.integer  "user_id"
+    t.index ["user_id"], name: "index_activities_on_user_id", using: :btree
   end
 
   create_table "conversations", force: :cascade do |t|
@@ -88,6 +98,7 @@ ActiveRecord::Schema.define(version: 20161122172058) do
   end
 
   add_foreign_key "accounts", "users"
+  add_foreign_key "activities", "users"
   add_foreign_key "hobbies", "profiles"
   add_foreign_key "messages", "conversations"
   add_foreign_key "messages", "users"

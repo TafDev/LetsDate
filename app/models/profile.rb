@@ -6,4 +6,8 @@ class Profile < ApplicationRecord
 	mount_uploader :avatar, AvatarUploader
 
 	GENDER = ['male', 'female', 'transgender']
+
+	def username
+		user.username
+	end
 end

@@ -1,0 +1,20 @@
+<div class="ui feed">
+	<div class="event">
+		<div class="label">
+			<%= image_tag(activity.user.profile.avatar.url || "", id: 'avatar-img') %>
+		</div>
+		<div class="content">
+			<div class="summary">
+				<%= activity.name %>
+				<div class="date">
+					<%= time_ago_in_words(activity.created_at) %>
+				</div>
+			</div>
+			<div class="meta">
+				<a class="like">
+					<i class="like icon"></i> 4 Likes
+				</a>
+			</div>
+		</div>
+	</div>
+</div>
