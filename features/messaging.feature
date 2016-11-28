@@ -19,5 +19,5 @@ Feature: Messaging System
       Given I am logged in as "Barvis"
        And I visit "root"
       When I click "My messages"
-      Then I should see "All my Conversations"
+      Then I should see "All Conversations"
       

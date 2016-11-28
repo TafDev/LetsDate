@@ -1,9 +1,9 @@
 
 <div class="ui feed">
 	<div class="event">
-		<div class="label large">
+		<div class="item">
 			<%= link_to user_profile_path(activity.user.id) do %>
-				<%= image_tag(activity.user.profile.avatar.url || "", id: 'avatar-img') %>
+				<%= image_tag(activity.user.profile.avatar.url || "", class: "ui avatar image") %>
 			<% end %>
 		</div>
 		<div class="content">

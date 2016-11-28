@@ -1,5 +1,4 @@
 When(/^I click "([^"]*)" icon$/) do |id|
-	save_and_open_page
 	find(id).click
 end
 

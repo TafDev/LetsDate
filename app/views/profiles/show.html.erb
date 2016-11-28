@@ -61,6 +61,28 @@
 						</a>
 				<% end %>
 			</div>
+
+			<div class="ui teal segment">
+				<%= form_for @post do |f| %>
+						<div class="ui form field">
+							<%= f.text_area :body %><br>
+							<br>
+							<%= f.submit "Create Post", class: "ui blue button" %>
+						</div>
+				<% end %>
+				<hr>
+				<div>
+					<h2 align="center">My posts</h2>
+					<% @my_posts.each do |post| %>
+							<%= post.body %>
+							<div class="date">
+								<%= time_ago_in_words(post.created_at) %>
+							</div>
+							<hr>
+					<% end %>
+				</div>
+				<br>
+			</div>
 		</div>
 	</div>
 </div>

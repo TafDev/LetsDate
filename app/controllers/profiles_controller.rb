@@ -6,6 +6,8 @@ class ProfilesController < ApplicationController
 		@profile = @user.profile
 		@hobby = @profile.hobbies.new
 		@message = Message.new
+		@post = Post.new
+		@my_posts = @user.posts.order("created_at DESC")
 	end
 
 

@@ -38,4 +38,17 @@ RSpec.describe Activity, type: :model do
 			expect(name).to eq("Barvis just got premium")
 		end
 	end
+
+	describe "User create a post" do
+		before do
+			barvis.posts.create(body: "I love to post n pose")
+		end
+
+		it "should create a new activity" do
+			expect(barvis.posts.count).to eq 1
+			name = barvis.user_activities.last.name
+			expect(barvis.user_activities.count).to eq 2
+			expect(name).to eq("Barvis said I love to post n pose")
+		end
+	end
 end
