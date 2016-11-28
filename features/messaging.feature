@@ -15,7 +15,6 @@ Feature: Messaging System
       And I fill "message_body" with "Hi mavis let's chat"
       Then I click "Send"
 
-     @wip
     Scenario: I can view all my conversations
       Given I am logged in as "Barvis"
        And I visit "root"

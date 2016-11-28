@@ -16,6 +16,9 @@ class User < ApplicationRecord
   has_many :activities, as: :activityable
   has_many :user_activities, class_name: "Activity", foreign_key: :user_id, inverse_of: :user
 
+  has_many :likes, as: :likable
+  has_many :user_likes, class_name: "Like", foreign_key: :user_id, inverse_of: :user
+
 	after_create :make_profile, :make_account, :create_new_user_activity
 
   def my_conversations

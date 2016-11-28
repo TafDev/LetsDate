@@ -10,7 +10,8 @@ Rails.application.routes.draw do
 
 
 	resources :messages, only: [:create]
-
+	resources :activities
+	resources :likes
 	resources :conversations do
 		resources :messages, only: [:index]
 	end

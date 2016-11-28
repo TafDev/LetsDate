@@ -1,7 +1,10 @@
+
 <div class="ui feed">
 	<div class="event">
-		<div class="label">
-			<%= image_tag(activity.user.profile.avatar.url || "", id: 'avatar-img') %>
+		<div class="label large">
+			<%= link_to user_profile_path(activity.user.id) do %>
+				<%= image_tag(activity.user.profile.avatar.url || "", id: 'avatar-img') %>
+			<% end %>
 		</div>
 		<div class="content">
 			<div class="summary">
@@ -10,11 +13,42 @@
 					<%= time_ago_in_words(activity.created_at) %>
 				</div>
 			</div>
-			<div class="meta">
-				<a class="like">
-					<i class="like icon"></i> 4 Likes
-				</a>
+			<div class="meta like">
+					<%= link_to semantic_icon('like', style: if current_user.user_likes.find_by(likable_id: activity.id).nil?
+						                                         "color: black;"
+					                                         else
+						                                         "color: red;"
+					                                         end
+					            ),
+					            likes_path(likable: {likable_type: "Activity", likable_id: activity.id}),
+					            id: "activity-#{activity.id}",
+					            method: :post,
+					            remote: true
+					%>
+				<span id="liked<%= activity.id %>"><%= activity.likes.count %>
+					like<%= "s" unless activity.likes.count == 1 %>
+				</span>
 			</div>
 		</div>
 	</div>
 </div>
+
+<script>
+	$('#activity-<%= activity.id %>').on('ajax:success', function (e, response){
+		var count = $('#liked<%= activity.id %>');
+		var likes = parseInt(count.html());
+
+		if (response.success == "liked") {
+			console.log(response.success);
+			var c = likes + 1;
+			$(this).children().css("color", "red");
+			count.html(c + " like")
+		}
+	   else if (response.success == "unliked") {
+			console.log(response.success);
+			var c = likes - 1;
+			$(this).children().css("color", "black");
+			count.html(c + " like")
+		}
+	});
+</script>

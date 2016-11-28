@@ -1,15 +1,12 @@
 <div class="ui container">
+	<%= link_to "Complete my Profile", user_profile_path(current_user), class: "ui positive basic button" %>
+
 	<% if current_user.sign_in_count <= 1 %>
-		<h1>
-			Thank you for signing up <%= current_user.username %>, You are not far from finding your soul mate. We currently have <%= User.all.count %> users waiting to talk to you.
-		</h1>
-		<h2>
-			We just need you to answer a few more question so we can better help you. We promise, it wont take forever
-		</h2>
+			<h1>Welcome <%= current_user.username %></h1>
 	<%  else %>
 		<h1>Welcome back <%= current_user.username %></h1>
-			<%= render @activities %>
 	<% end  %>
 
-	<%= link_to "Complete my Profile", user_profile_path(current_user), class: "ui positive basic button" %>
+	<%= render @activities %>
+
 </div>
