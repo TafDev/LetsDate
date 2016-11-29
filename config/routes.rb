@@ -9,6 +9,7 @@ Rails.application.routes.draw do
 	root to: "home#index"
 
 
+	resources :media_contents, only: [:create, :show]
 	resources :messages, only: [:create]
 	resources :comments
 	resources :activities

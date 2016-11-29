@@ -22,6 +22,7 @@ class User < ApplicationRecord
   has_many :comments, as: :commentable
   has_many :user_comments, class_name: "Comment", foreign_key: :user_id, inverse_of: :user
   has_many :posts
+  has_many :media
 
 	after_create :make_profile, :make_account, :create_new_user_activity
 

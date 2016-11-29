@@ -15,16 +15,24 @@
  */
 
 @import "semantic-ui";
+@import "dropzone/dropzone";
 @import "profiles";
 @import "conversations";
 @import "activities";
 @import "home";
 
 
+.dz-message {
+  color: black;
+}
 .container {
   margin-top: 5em;
 }
 
 .date {
   color: grey;
+}
+
+.img-style {
+  display: inline-block;
 }

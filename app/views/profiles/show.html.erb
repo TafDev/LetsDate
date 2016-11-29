@@ -60,12 +60,13 @@
 							</div>
 						</a>
 				<% end %>
+				<%= link_to "Pictures", media_content_path(@user), class: "ui blue button" %>
 			</div>
 
 			<div class="ui teal segment">
 				<%= form_for @post do |f| %>
 						<div class="ui form field">
-							<%= f.text_area :body %><br>
+							<%= f.text_area :body, rows: 3 %><br>
 							<br>
 							<%= f.submit "Create Post", class: "ui blue button" %>
 						</div>

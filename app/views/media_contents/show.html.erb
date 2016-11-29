@@ -1,0 +1,131 @@
+<div class="ui basic modal">
+	<i class="close icon"></i>
+	<%= form_tag '/media_contents', method: :post, class: "dropzone", id: "media-dropzone" do %>
+			<div class="fallback">
+				<%= file_field_tag "media", multiple: true %>
+			</div>
+	<% end %>
+</div>
+
+
+<div class="ui container">
+<button class="positive ui button">Upload images</button>
+	<br>
+	<br>
+
+				<div class="ui stackable four column grid">
+
+			<% @images.each do |image| %>
+				<div class="column">
+					<div class="ui card">
+						<div class="content">
+							<div class="right floated meta"><%= time_ago_in_words(image.created_at) %></div>
+							<div class="image">
+								<%= image_tag image.file_name.url %>
+							</div>
+							<br>
+							<div class="content">
+				    <span class="right floated">
+				      <div class="meta like">
+				<%= link_to semantic_icon('like', style: if current_user.user_likes.find_by(likable_id: image.id).nil?
+					                                         "color: black;"
+					                                       else
+						                                       "color: red;"
+				                                         end
+				            ),
+				            likes_path(likable: {likable_type: "Medium", likable_id: image.id}),
+				            id: "image-#{image.id}",
+				            method: :post,
+				            remote: true
+				%>
+					      <span id="liked<%= image.id %>"><%= image.likes.count %>
+				</span>
+					      </div>
+				    </span>
+								<i id = "comment-<%= image.id %>" class="comment outline icon"></i>
+								<%= image.comments.count %>
+
+
+								<div class="comments">
+									<div class="comment">
+										<div class="content">
+											<div id="comment-body-<%= image.id %>">
+												<% image.comments.each do |comment| %>
+														<strong><%=link_to comment.user.username, user_profile_path(comment.user) %> </strong><%= comment.body %><br>
+												<% end %>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<hr>
+							<div class="extra content">
+								<div id="comment-form-<%= image.id %>" class="comment-form ui form">
+									<div class= "ui large transparent left icon input">
+										<%= form_for @comment, remote: true do |f| %>
+												<div id="comment-field-<%= image.id %>">
+													<%= f.text_field :body, placeholder: "Add Comment" %>
+													<%= f.hidden_field :commentable_type, :value => "Medium" %>
+													<%= f.hidden_field :commentable_id, :value => image.id %>
+													<%= f.submit class: "comment-submit" %>
+												</div>
+										<% end %>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			<% end %>
+			</div>
+	</div>
+
+
+
+
+
+<script type="text/javascript" charset="utf-8">
+
+	<% @images.each do |image| %>
+	$("#comment-form-<%= image.id %>" ).on('ajax:success', function (e, response) {
+		console.log(response);
+		var id = response.commentable_id.toString();
+		$("#comment-body-" + id).append(response.body);
+	});
+
+
+	$('#image-<%= image.id %>').on('ajax:success', function (e, response){
+		var count = $('#liked<%= image.id %>');
+		var likes = parseInt(count.html());
+
+		if (response.success == "liked") {
+			console.log(response.success);
+			var c = likes + 1;
+			$(this).children().css("color", "red");
+			count.html(c)
+		}
+		else if (response.success == "unliked") {
+			console.log(response.success);
+			var c = likes - 1;
+			$(this).children().css("color", "black");
+			count.html(c)
+		}
+	});
+	<% end %>
+
+
+
+	$('.positive').on('click', function () {
+		$('.ui.basic.modal').modal('show');
+	});
+
+
+	$(function () {
+		var mediaDropzone;
+		mediaDropzone = new Dropzone("#media-dropzone");
+		return mediaDropzone.on("success", function (file, responseText) {
+			var imageUrl;
+			imageUrl = responseText.file_name.url;
+		});
+	});
+</script>

@@ -86,13 +86,13 @@
 			console.log(response.success);
 			var c = likes + 1;
 			$(this).children().css("color", "red");
-			count.html(c + " like")
+			count.html(c)
 		}
 	   else if (response.success == "unliked") {
 			console.log(response.success);
 			var c = likes - 1;
 			$(this).children().css("color", "black");
-			count.html(c + " like")
+			count.html(c)
 		}
 	});
 </script>
