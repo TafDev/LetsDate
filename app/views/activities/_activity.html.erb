@@ -13,8 +13,9 @@
 					<%= time_ago_in_words(activity.created_at) %>
 				</div>
 			</div>
+
 			<div class="meta like">
-					<%= link_to semantic_icon('like', style: if current_user.user_likes.find_by(likable_id: activity.id).nil?
+				<%= link_to semantic_icon('like', style: if current_user.user_likes.find_by(likable_id: activity.id).nil?
 						                                         "color: black;"
 					                                         else
 						                                         "color: red;"
@@ -26,14 +27,57 @@
 					            remote: true
 					%>
 				<span id="liked<%= activity.id %>"><%= activity.likes.count %>
-					like<%= "s" unless activity.likes.count == 1 %>
 				</span>
+
+				<i id = "comment-<%= activity.id %>" class="comment outline icon"></i>
+				<%= activity.comments.count %>
+
+
+				<div class="comments">
+					<div class="comment">
+						<div class="content">
+							<div id="comment-body-<%= activity.id %>">
+								<% activity.comments.each do |comment| %>
+										<strong><%=link_to comment.user.username, user_profile_path(comment.user) %> </strong><%= comment.body %><br>
+								<% end %>
+							</div>
+						</div>
+					</div>
+				</div>
+
+
+					<div id="comment-form-<%= activity.id %>" class="comment-form ui form">
+						<div class= "field">
+							<%= form_for @comment, remote: true do |f| %>
+									<div id="comment-field-<%= activity.id %>" class="comment-field">
+										<%= f.text_field :body %>
+										<%= f.hidden_field :commentable_type, :value => "Activity" %>
+										<%= f.hidden_field :commentable_id, :value => activity.id %>
+										<%= f.submit class: "comment-submit" %>
+									</div>
+							<% end %>
+						</div>
+				</div>
 			</div>
 		</div>
 	</div>
 </div>
 
 <script>
+	$("#comment-form-<%= activity.id %>" ).on('ajax:success', function (e, response) {
+		console.log(response);
+		var id = response.commentable_id.toString();
+		$("#comment-body-" + id).append(response.body).fadeIn();
+		$("#comment-form-" + id).fadeOut();
+	});
+
+	$('#comment-<%= activity.id %>').on('click', function () {
+		var id = $(this).attr("id");
+		$('#comment-field-<%= activity.id %>').css("display", "block");
+		console.log(id);
+	});
+
+
 	$('#activity-<%= activity.id %>').on('ajax:success', function (e, response){
 		var count = $('#liked<%= activity.id %>');
 		var likes = parseInt(count.html());

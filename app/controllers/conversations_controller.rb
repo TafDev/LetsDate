@@ -1,7 +1,7 @@
 class ConversationsController < ApplicationController
 
 	def index
-		@my_conversations = current_user.my_conversations.all.order('created_at')
+		@my_conversations = current_user.my_conversations.order("created_at DESC")
 		# @conversation = Conversation.find(id: params[:id])
 		@message = Message.new
 		# @recipient = @conversation.counterpart(current_user)

@@ -42,7 +42,6 @@
 
 	$('.msg').on('click', function () {
 		var id = $(this).attr("id").substring(5, 99) ;
-//		var counterpart = $(this).attr("x-counterpart");
 		$('#message_conversation_id').val(id);
 		$.get('/conversations/' + id).success(function (data) {
 //			 /debugger

@@ -10,6 +10,7 @@ Rails.application.routes.draw do
 
 
 	resources :messages, only: [:create]
+	resources :comments
 	resources :activities
 	resources :likes
 	resources :posts
