@@ -1,5 +1,5 @@
 <div class="ui container">
-	<%= link_to "Complete my Profile", user_profile_path(current_user), class: "ui positive basic button" %>
+	<%#= link_to "Complete my Profile", user_profile_path(current_user), class: "ui positive basic button" %>
 
 	<% if current_user.sign_in_count <= 1 %>
 			<h1>Welcome <%= current_user.username %></h1>

@@ -12,8 +12,8 @@
   <div class="ui top fixed borderless menu">
 	  <% if user_signed_in? %>
 			  <%= link_to "Home", root_path, class: 'item' %>
-
 			  <%= link_to "My messages", conversations_path, class: 'item' %>
+			  <%= link_to "My profile", user_profile_path(current_user), class: "item" %>
 	  <a class="item">
 		  Friends
 	  </a>
