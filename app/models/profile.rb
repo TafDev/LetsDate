@@ -5,7 +5,8 @@ class Profile < ApplicationRecord
 
 	mount_uploader :avatar, AvatarUploader
 
-
+	# reverse_geocoded_by :lat, :lng
+	# after_validation :reverse_geocode
 
 	GENDER = ['male', 'female', 'transgender']
 
