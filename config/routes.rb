@@ -8,6 +8,8 @@ Rails.application.routes.draw do
 	# For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 	root to: "home#index"
 
+	post '/location', to: 'profiles#update_location'
+
 
 	resources :media_contents, only: [:create, :show]
 	resources :messages, only: [:create]

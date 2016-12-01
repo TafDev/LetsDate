@@ -7,6 +7,16 @@
 		<h1>Welcome back <%= current_user.username %></h1>
 	<% end  %>
 
-	<%= render @activities %>
+	<div class="ui grid">
+		<div class="eight wide columns">
+			<div class="ui teal segment">
+				<%= render @activities %>
+			</div>
+		</div>
+		<div class="ui grid eight columns">
+			<div class="ui teal segment">
+			</div>
+		</div>
+	</div>
 
 </div>

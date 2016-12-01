@@ -1,6 +1,6 @@
 class ProfilesController < ApplicationController
 
-	before_action :validate_user_exist
+	before_action :validate_user_exist, except: [:update_location]
 
 	def show
 		@profile = @user.profile
@@ -10,6 +10,9 @@ class ProfilesController < ApplicationController
 		@my_posts = @user.posts.order("created_at DESC")
 	end
 
+	def update_location
+		get_location
+	end
 
 	def update
 		@profile = current_user.profile

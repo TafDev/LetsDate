@@ -1,12 +1,40 @@
-<div class="ui container">
-	<!--<h2>Here is a list of what we need from you <%#= current_user.username %></h2>-->
-	<!--<ul>-->
-	<!--<li>Preferences</li>-->
-	<!--<li>Age Preference</li>-->
-	<!--<li>What you like</li>-->
-	<!--</ul>-->
-<%= render 'message' %>
+<script>
+	var map;
+	function initMap() {
+		var position = <%= {lat: current_user.profile.lat , lng: current_user.profile.lng }.to_json.html_safe %>;
+		var map = new google.maps.Map(document.getElementById('map'), {
+			center: position,
+			zoom: 8
+		});
+		var marker = new google.maps.Marker({
+			position: position,
+			map: map
+		});
 
+		var geo = navigator.geolocation;
+		if (geo) {
+			geo.getCurrentPosition(function (data) {
+						$('#lat').val(data.coords.latitude);
+						$('#lng').val(data.coords.longitude);
+					}, function error(msg) {
+						$("#error").html(msg);
+						console.log(msg);
+					},
+					{
+						timeout: 10000,
+						maximumAge: 900,
+						enableHighAccuracy: true
+					});
+		}
+
+	}
+</script>
+
+<script src='https://maps.googleapis.com/maps/api/js?key=AIzaSyBaQIJZ723fLKOQ87RpFQ5O-fDy6qOdOk8&callback=initMap'
+        async defer></script>
+
+<div class="ui container">
+<%= render 'message' %>
 	<div class="ui stackable grid">
 		<div class="five wide column">
 			<div class="ui vertical fluid menu">
@@ -42,6 +70,13 @@
 					<hr>
 					<div class="six wide column">
 						<%= render 'about_me' %>
+						<div id="post-location">
+							<input type="hidden" name="lat" id="lat">
+							<input type="hidden" name="lng" id="lng">
+							<button id= "submit-location" class="ui primary button">
+								Update Location
+							</button>
+						</div>
 					</div>
 
 				</div>
@@ -63,6 +98,7 @@
 				<%= link_to "Pictures", media_content_path(@user), class: "ui blue button" %>
 			</div>
 
+
 			<div class="ui teal segment">
 				<%= form_for @post do |f| %>
 						<div class="ui form field">
@@ -83,12 +119,37 @@
 					<% end %>
 				</div>
 				<br>
+
+
 			</div>
 		</div>
+	</div>
+	<div class="ui teal segment">
+		<div id="map"></div>
 	</div>
 </div>
 
 <script type="text/javascript" charset="utf-8">
+
+	$('#post-location').on("click", function () {
+		latitude = $('#lat').val();
+		longitude= $('#lng').val();
+		console.log(longitude, latitude);
+//		debugger;
+
+		$.ajax({
+			method: "POST",
+			url: '/location',
+			data: {
+				lat: latitude,
+				lng: longitude
+		},
+			success: function () {
+
+			}
+		});
+	});
+
 
 	$('#message-me').on('click', function () {
 		$('.small.modal')

@@ -64,6 +64,20 @@
 </div>
 
 <script>
+
+//	$('.feed')
+//			.visibility({
+//				once: false,
+//				// update size when new content loads
+//				observeChanges: true,
+//				// load content on bottom edge visible
+//				onBottomVisible: function() {
+//					// loads a max of 5 times
+//					window.loadFakeContent();
+//				}
+//			})
+//	;
+
 	$("#comment-form-<%= activity.id %>" ).on('ajax:success', function (e, response) {
 		console.log(response);
 		var id = response.commentable_id.toString();
